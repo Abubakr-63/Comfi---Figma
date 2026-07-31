@@ -80,9 +80,9 @@
   ],
   "basket": [
     {
-      "count": 3,
+      "id": "DM6IT2j7jQ4",
       "idUser": "2",
-      "id": "DM6IT2j7jQ4"
+      "count": 5
     },
     {
       "count": 5,
@@ -98,6 +98,11 @@
       "idUser": "7",
       "count": 1,
       "id": "46U9MGIisB8"
+    },
+    {
+      "idUser": "6",
+      "count": 1,
+      "id": "b_HllIuwxFI"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
