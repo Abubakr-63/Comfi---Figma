@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfy - Albany Table</title>
+    <link rel="stylesheet" href="./css/info.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="productPage.html">Products</a>
+                <a href="./aboutPage.html">About</a>
+            </div>
+            <div class="logo">comfy</div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-banner">
+        <div class="container">
+            <h2>Home / Albany Table</h2>
+        </div>
+    </div>
+
+    <main class="single-product container">
+        <div class="product-image-container">
+            <img class="imageinfo" src="" alt="Albany Table">
+        </div>
+
+        <div class="product-details">
+            <h1 class="infoName"></h1>
+            <p class="brand"></p>
+            <div class="place-price">
+            <p class="price"></p>
+
+            <div class="color-options">
+                <span class="color-dot red"></span>
+                <span class="color-dot dark"></span>
+            </div>
+            </div>
+            <p class="description">
+                Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge
+            </p>
+
+            <button class="btn btn-brown">ADD TO CART</button>
+        </div>
+    </main>
+    <dialog id="cartDialog" class="cart-dialog">
+        <form method="dialog" class="cart-container">
+            <button class="close-btn" value="cancel" formnovalidate>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2 class="cart-title">Your Bag</h2>
+
+            <div class="cart-items"></div>
+
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span class="total-label">Total:</span>
+                    <span class="total-amount">$79,99</span>
+                </div>
+                <button type="submit" value="checkout" class="btn-checkout">CHECKOUT</button>
+            </div>
+        </form>
+    </dialog>
+    <script type="module" src="./js/info/main.js"></script>
+</body>
+</html>

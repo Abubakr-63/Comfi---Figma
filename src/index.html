@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfy</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"></link>
+</head>
+<body>
+
+    <header class="hero-section">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="./productPage.html">Products</a>
+                <a href="./aboutPage.html">About</a>
+            </div>
+            <div class="logo">comfy</div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge">0</span>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Rest, Relax, Unwind</h1>
+            <p>Embrace your choices - we do</p>
+            <a href="#" class="btn btn-transparent">SHOW NOW</a>
+        </div>
+    </header>
+
+    <section class="featured-section">
+        <h2 class="section-title"><span>/</span> Featured</h2>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./images/Rectangle 41.png" alt="High-Back Bench">
+                </div>
+                <h3>High-Back Bench</h3>
+                <p class="price">$9,99</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./images/Rectangle 41 (1).png" alt="Utopia Sofa">
+                </div>
+                <h3>Utopia Sofa</h3>
+                <p class="price">$39,95</p>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./images/Rectangle 41 (2).png" alt="Entertainment Center">
+                </div>
+                <h3>Entertainment Center</h3>
+                <p class="price">$29,98</p>
+            </div>
+        </div>
+
+        <div class="all-products-btn">
+            <a href="./productPage.html" class="btn btn-brown">ALL PRODUCTS</a>
+        </div>
+    </section>
+    <dialog id="cartDialog" class="cart-dialog">
+        <form method="dialog" class="cart-container">
+            <button class="close-btn" value="cancel" formnovalidate>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2 class="cart-title">Your Bag</h2>
+
+            <div class="cart-items"></div>
+
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span class="total-label">Total:</span>
+                    <span class="total-amount">$79,99</span>
+                </div>
+                <button type="submit" value="checkout" class="btn-checkout">CHECKOUT</button>
+            </div>
+        </form>
+    </dialog>
+    <script type="module" src="./js/showPage/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "High-Back Bench",
+      "price": 9.99,
+      "company": "ikea",
+      "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "2",
+      "title": "Albany Table",
+      "price": 79.99,
+      "company": "marcos",
+      "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "4",
+      "title": "Wooden Table",
+      "price": 45.99,
+      "company": "caressa",
+      "image": "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "5",
+      "title": "Dining Table",
+      "price": 6.99,
+      "company": "liddy",
+      "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "6",
+      "title": "Sofa Set",
+      "price": 69.99,
+      "company": "marcos",
+      "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "7",
+      "title": "Modern Bookshelf",
+      "price": 8.99,
+      "company": "ikea",
+      "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "8",
+      "title": "Emperor Bed",
+      "price": 21.99,
+      "company": "liddy",
+      "image": "https://images.unsplash.com/photo-1580481072645-022f9a6d8310?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "9",
+      "title": "Utopia Sofa",
+      "price": 39.95,
+      "company": "marcos",
+      "image": "https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "10",
+      "title": "Entertainment Center",
+      "price": 29.98,
+      "company": "caressa",
+      "image": "https://images.unsplash.com/photo-1540574163026-643ea20ade25?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "11",
+      "title": "Albany Sectional",
+      "price": 10.99,
+      "company": "ikea",
+      "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      "id": "12",
+      "title": "Leather Sofa",
+      "price": 9.99,
+      "company": "liddy",
+      "image": "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80"
+    }
+  ],
+  "basket": [
+    {
+      "count": 3,
+      "idUser": "2",
+      "id": "DM6IT2j7jQ4"
+    },
+    {
+      "count": 5,
+      "idUser": "1",
+      "id": "OGYE_iCSTqw"
+    },
+    {
+      "idUser": "10",
+      "count": 1,
+      "id": "FLRaBu6vFgQ"
+    },
+    {
+      "idUser": "7",
+      "count": 1,
+      "id": "46U9MGIisB8"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

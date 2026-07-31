@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfy - About</title>
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="productPage.html">Products</a>
+                <a href="" class="active">About</a>
+            </div>
+            <div class="logo">comfy</div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-banner">
+        <div class="container">
+            <h2>Home / About</h2>
+        </div>
+    </div>
+
+    <main class="about-section container">
+        <h2 class="section-title"><span>/</span> Our history</h2>
+        <div class="about-content">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat accusantium sapiente tempora sed dolore esse deserunt eaque excepturi, delectus error accusamus vel eligendi, omnis beatae. Quisquam, dicta. Eos quod quisquam esse recusandae vitae neque dolore, obcaecati incidunt sesequi blanditiis est exercitationem molestiae delectus saepe odio eligendi modi porro eaque in libero minus unde sapiente consectetur architecto. Ullam rerum, nemo iste ex, eaque perspiciatis nisi, eum totam velit saepe sed quos similique amet. Ex, voluptate accusamus nesciunt totam vitae esse iste.
+            </p>
+        </div>
+    </main>
+    <dialog id="cartDialog" class="cart-dialog">
+        <form method="dialog" class="cart-container">
+            <button class="close-btn" value="cancel" formnovalidate>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2 class="cart-title">Your Bag</h2>
+
+            <div class="cart-items"></div>
+
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span class="total-label">Total:</span>
+                    <span class="total-amount">$79,99</span>
+                </div>
+                <button type="submit" value="checkout" class="btn-checkout">CHECKOUT</button>
+            </div>
+        </form>
+    </dialog>
+    <script type="module" src="./js/showPage/main.js"></script>
+</body>
+</html>

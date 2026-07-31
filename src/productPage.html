@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comfy - Products</title>
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"></link>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#" class="active">Products</a>
+                <a href="./aboutPage.html">About</a>
+            </div>
+            <div class="logo">comfy</div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb-banner">
+        <div class="container">
+            <h2>Home / Products</h2>
+        </div>
+    </div>
+
+    <main class="products-section container">
+        <aside class="sidebar">
+            <div class="search-box">
+                <input class="search" type="text" placeholder="Search...">
+            </div>
+
+            <div class="filter-group">
+                <h4>Company</h4>
+                <select class="company-list selectbyCountry">
+                    <option value="all" class="active">All Company</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price</h4>
+                <input type="range" class="price-range" min="0" max="100" value="80">
+                <p class="price-value">Value : $80</p>
+            </div>
+        </aside>
+
+        <section class="products-grid"></section>
+    </main>
+    <dialog id="cartDialog" class="cart-dialog">
+        <form method="dialog" class="cart-container">
+            <button class="close-btn" value="cancel" formnovalidate>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h2 class="cart-title">Your Bag</h2>
+
+            <div class="cart-items"></div>
+
+            <div class="cart-footer">
+                <div class="total-row">
+                    <span class="total-label">Total:</span>
+                    <span class="total-amount">$79,99</span>
+                </div>
+                <button type="submit" value="checkout" class="btn-checkout">CHECKOUT</button>
+            </div>
+        </form>
+    </dialog>
+    <script type="module" src="./js/main/main.js"></script>
+</body>
+</html>

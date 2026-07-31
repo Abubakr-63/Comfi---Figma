@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+.hero-section {
+    max-width: 1200px;
+    margin: auto;
+    position: relative;
+    height: 75vh;
+    min-height: 500px;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
+                url(../images/Rectangle\ 37.png) center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 80px;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.logo {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    background-color: #c06c39;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    margin-bottom: 120px;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-transparent {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.btn-transparent:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-brown {
+    background-color: #ba6236;
+    color: #ffffff;
+    padding: 10px 24px;
+}
+
+.btn-brown:hover {
+    background-color: #a0522b;
+}
+
+.featured-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 80px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #222222;
+    margin-bottom: 50px;
+}
+
+.section-title span {
+    color: #ba6236;
+    margin-right: 5px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: 220px;
+    background-color: #f1f5f8;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #617d98;
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #333333;
+}
+
+.all-products-btn {
+    margin-top: 20px;
+}
+
+
+
+
+
+/* dialog */
+
+.cart-dialog {
+    margin: 0 0 0 auto;
+    height: 100vh;
+    max-height: 100vh;
+    width: 360px;
+    border: none;
+    background-color: #f8f9fa;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.15);
+}
+
+.cart-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.cart-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 25px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #102a43;
+    cursor: pointer;
+}
+
+.cart-title {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #102a43;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.cart-items {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.cart-item img {
+    width: 75px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+.item-info h4 {
+    font-size: 0.85rem;
+    color: #617d98;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.item-info .price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #102a43;
+    margin-bottom: 6px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    color: #ba6236;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.qty-value {
+    font-size: 0.85rem;
+    color: #102a43;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: #102a43;
+    font-size: 0.8rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.cart-footer {
+    margin-top: auto;
+    padding-top: 20px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.total-label {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #102a43;
+}
+
+.total-amount {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #102a43;
+}
+
+.btn-checkout {
+    width: 100%;
+    padding: 12px;
+    background-color: #ba6236;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-checkout:hover {
+    background-color: #a0522b;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 20px;
+    }
+
+    .featured-section {
+        padding: 40px 20px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
