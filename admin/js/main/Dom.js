@@ -68,7 +68,7 @@ if(searchinput)searchinput.oninput = () => {
 
 const pricerange = document.querySelector('.price-slider');
 const pricevalue = document.querySelector('.price-value')
-pricerange.oninput = () => {
+if(pricerange)pricerange.oninput = () => {
   pricevalue.innerHTML = `Value : $${pricerange.value}`
     filterPrices(pricerange.value)
 }
