@@ -1,4 +1,4 @@
-import getUsers, { deleteUser, searchInp, selectCompany } from "./API.js";
+import getUsers, { deleteUser, filterPrices, searchInp, selectCompany } from "./API.js";
 
 const box = document.querySelector('.products-grid');
 const selectbyCompany = document.querySelector('.selectbyCompany');
@@ -64,4 +64,9 @@ if(addbtn)addbtn.onclick = () => {
 
 if(searchinput)searchinput.oninput = () => {
   searchInp(searchinput.value)
+}
+
+const pricerange = document.querySelector('.price-slider');
+pricerange.oninput = () => {
+    filterPrices(pricerange.value)
 }

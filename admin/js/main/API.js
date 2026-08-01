@@ -108,3 +108,17 @@ export async function searchInp(value) {
         console.log(error)
     }
 }
+
+
+export async function filterPrices(value) {
+    try {
+        if(value == ''){
+            getUsers();
+            return '';
+        }
+        const {data} = await axios.get(`${API}?price_lte=${value}`);
+        showProducts(data);
+    } catch (error) {
+        console.log(error)
+    }
+}

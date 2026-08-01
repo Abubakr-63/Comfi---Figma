@@ -1,4 +1,4 @@
-import getUsers, { putSizeproduct, removeProduct, searchInp, selectCompany } from "./API.js";
+import getUsers, { filterPrices, putSizeproduct, removeProduct, searchInp, selectCompany } from "./API.js";
 
 const box = document.querySelector('.products-grid');
 const cartDialog = document.querySelector('#cartDialog');
@@ -108,4 +108,9 @@ if(selectbyCompany)selectbyCompany.onchange = () => {
         return "";
     }
     selectCompany(selectbyCompany.value)
+}
+
+const pricerange = document.querySelector('.price-range');
+pricerange.oninput = () => {
+    filterPrices(pricerange.value)
 }
