@@ -1,6 +1,7 @@
 import axios from '../../../node_modules/axios/dist/esm/axios.js';
-import { addCount, checkforDuplicates, chosenProducts, findId, get, infoeditproducts, putSizeproduct, showProducts } from "../main/API.js";
-get()
+import { addCount, checkforDuplicates, chosenProducts, findId, get, getAllPrice, infoeditproducts, putSizeproduct } from "../main/API.js";
+get();
+getAllPrice()
 export const imageinfo = document.querySelector('.imageinfo');
 export const infoName = document.querySelector('.infoName');
 export const brand = document.querySelector('.brand');
@@ -35,6 +36,7 @@ export function dublicate(arr){
     let obj = {
         idUser : localStorage.getItem('id'),
         count : 1,
+        price : +localStorage.getItem('productPrice')
     }
     if(boolean == false){
        addCount(obj);

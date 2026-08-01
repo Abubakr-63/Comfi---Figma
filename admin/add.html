@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>comfy - Edit Product</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/edit.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <nav class="nav-links">
+        <a href="./Home.html">Home</a>
+        <a href="./Admin.html">Products</a>
+        <a href="./about.html">About</a>
+        <a href="./Admin.html" class="admin-link">Admin</a>
+      </nav>
+      
+      <div class="logo">comfy</div>
+      
+      <div class="cart-select-container">
+        <select class="custom-select">
+          <option value="all">All Company</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="breadcrumb-section">
+    <div class="breadcrumb-container">
+      <h2>Admin / Add Product</h2>
+    </div>
+  </section>
+
+  <main class="form-container">
+    <form class="add-form">
+      <div class="form-header">
+        <h3>Добавить товар</h3>
+        <a href="./Admin.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Назад</a>
+      </div>
+
+      <div class="form-group">
+        <label for="product-name">Название товара</label>
+        <input type="text" name="nameProduct" id="product-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="product-name">Компания</label>
+        <input type="text" name="nameCompany" id="product-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="product-price">Цена ($)</label>
+        <input type="text" name="price" id="product-price" step="0.01" required>
+      </div>
+
+      <input type="hidden" name="idUser">
+
+      <div class="form-group">
+          <label for="product-image">Изображения</label>
+          <div class="imagebox">
+              <input type="file" name="image" id="product-image" required>
+              <button type="button" name="watch-Image" class="watch-Image">Watch</button>
+              <img class="show-image" src="" alt="">
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn-save"><i class="fa-solid fa-floppy-disk"></i> Сохранить</button>
+        <a href="./Admin.html" class="btn-cancel">Отмена</a>
+      </div>
+    </form>
+  </main>
+  <script type="module" src="./js/add/main.js"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
-import { chosenProducts, get } from "../main/API.js";
+import { chosenProducts, get, getAllPrice } from "../main/API.js";
 
-get()
+get();
+getAllPrice()
 
 const carticon = document.querySelector('.cart-icon');
 const cartDialog = document.querySelector('#cartDialog');

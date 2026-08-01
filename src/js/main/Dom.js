@@ -6,7 +6,7 @@ const search = document.querySelector('.search');
 const selectbyCompany = document.querySelector('.selectbyCountry');
 
 export default function showUser(data) {
-    box.innerHTML = '';
+    if(box)box.innerHTML = '';
     data.forEach(element => {
         const card = document.createElement('div');
         card.className = 'product-card';
@@ -19,19 +19,20 @@ export default function showUser(data) {
         
         card.onclick = () => {
             localStorage.setItem('id', element.id)
+            localStorage.setItem('productPrice', element.price)
             window.location.href = 'infoPage.html'
         }
-        box.append(card);
+        if(box)box.append(card);
     });
 }
 
 const carticon = document.querySelector('.cart-icon');
-carticon.onclick = () => {
+if(carticon)carticon.onclick = () => {
     cartDialog.showModal();
 }
 
 
-export async function showProctsinBasket(data, basketid, cnt) {
+export async function showProctsinBasket(data, basketid, cnt, price) {
     const cartitems = document.querySelector('.cart-items');
     const card = document.createElement('div');
     card.className = 'cart-item';
@@ -56,16 +57,20 @@ export async function showProctsinBasket(data, basketid, cnt) {
                count : cnt+1,
                idUser : data.id,
                id : basketid,
+               price : +price + +price,
             }
-            
+            console.log(+price + +price)
             putSizeproduct(newSize)
         }
 
         minus.onclick = () => {
+            let res = [`${+price - +localStorage.getItem('productPrice')}`]
+            let res2 = res[0].slice(0, 5)
             let newSize = {
                count : cnt-1,
                idUser : data.id,
                id : basketid,
+               price : res2,
             }
             if(cnt == 1){
                 alert('There is need to be one, it cannot become zero')

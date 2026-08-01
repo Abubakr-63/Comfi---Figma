@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>comfy - Products</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="nav-container">
+      <nav class="nav-links">
+        <a href="./Home.html">Home</a>
+        <a href="#">Products</a>
+        <a href="./about.html">About</a>
+        <a href="#" class="admin-link">Admin</a>
+      </nav>
+      
+      <div class="logo">comfy</div>
+      
+      <div class="boxbtn">
+      <div class="cart-select-container">
+        <select class="selectbyCompany custom-select">
+          <option value="all">All Company</option>
+        </select>
+      </div>
+      <button class="addbtn">Add new Product</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="breadcrumb-section">
+    <div class="breadcrumb-container">
+      <h2>Admin / Products</h2>
+    </div>
+  </section>
+
+  <main class="main-container">
+    
+    <aside class="sidebar">
+      <input type="text" placeholder="Search..." class="search-input">
+
+      <div class="filter-group">
+        <h3>Price</h3>
+        <input type="range" min="0" max="100" value="80" class="price-slider">
+        <p class="price-value">Value : $80</p>
+      </div>
+    </aside>
+
+    <section class="products-grid"></section>
+  </main>
+  <script type="module" src="./js/main/main.js"></script>
+</body>
+</html>

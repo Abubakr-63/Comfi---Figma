@@ -8,6 +8,7 @@ export default async function getUsers() {
     try {
         const {data} = await axios.get(API);
         showUser(data);
+        showProducts(data)
     } catch (error) {
         console.log(error)
     }
@@ -35,7 +36,8 @@ export async function get() {
 }
 
 export async function infoeditproducts(id) {
-    try {
+    if(imageinfo){
+        try {
         const {data} = await axios.get(`${API}/${id}`);
         if(imageinfo)imageinfo.src = data.image;
         if(infoName)infoName.innerHTML = data.title;
@@ -44,13 +46,14 @@ export async function infoeditproducts(id) {
     } catch (error) {
         console.log(error)
     }
+    }
 }
 
 export async function chosenProducts() {
     try {
         const {data} = await axios.get(APIbasket)
         for(let i = 0; i < data.length; i++){
-            showProducts(data[i].idUser, data[i].id, data[i].count)
+            showProducts(data[i].idUser, data[i].id, data[i].count, data[i].price)
         }
     } catch (error) {
         console.log(error)
@@ -58,12 +61,12 @@ export async function chosenProducts() {
 }
 
 
-export async function showProducts(id, basketid, cnt) {
+export async function showProducts(id, basketid, cnt, price) {
     try {
         const {data} = await axios.get(`${API}/${id}`);
         localStorage.setItem('productName', data);
         localStorage.setItem('idbasket', basketid)
-        showProctsinBasket(data, basketid, cnt)
+        showProctsinBasket(data, basketid, cnt, price)
     } catch (error) {
         console.log(error)
     }
@@ -86,7 +89,7 @@ export async function searchInp(value) {
             getUsers();
             return '';
         }
-        const {data} = await axios.get(`${API}?title=${value}`);
+        const {data} = await axios.get(`${API}?title:contains=${value}`);
         showUser(data);
     } catch (error) {
         console.log(error)
@@ -132,7 +135,7 @@ export async function checkforDuplicates() {
         for(let i = 0; i < data.length ; i++){
         arr.push(data[i].idUser)
     }
-    dublicate(arr)
+    dublicate(arr);
     } catch (error) {
         console.log(error)
     }
@@ -147,11 +150,25 @@ export async function findId(id) {
                   id : element.id,
                   idUser : element.idUser,
                   count :  element.count + 1,
+                  price : +element.price + +element.price,
                 }
                 putSizeproduct(edited)
                 window.location.href = 'productPage.html'
             }
         });
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+let res = 0
+export async function getAllPrice() {
+    try {
+        const {data} = await axios.get(APIbasket);
+        data.forEach(element => {
+            res += +element.price
+        })
+        document.querySelector('.total-amount').innerHTML = `$${res}`;
     } catch (error) {
         console.log(error)
     }
