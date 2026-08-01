@@ -28,7 +28,7 @@ if(showimage2)addform.onsubmit = () => {
         price : addform['price'].value,
         image : reader.result,
     } 
-    addform.reset();
     postUser(edited);
+    addform.reset();
     window.location.href = 'Admin.html';
 }
