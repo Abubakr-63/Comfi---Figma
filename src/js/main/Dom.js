@@ -111,6 +111,8 @@ if(selectbyCompany)selectbyCompany.onchange = () => {
 }
 
 const pricerange = document.querySelector('.price-range');
+const pricevalue = document.querySelector('.price-value');
 pricerange.oninput = () => {
+    pricevalue.innerHTML = `Value : $${pricerange.value}`
     filterPrices(pricerange.value)
 }
